@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <!-- Product details section -->
+            <section class="bg-light py-5">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">{{ product.name }}</h1>
+                        <img src="{{ product.picture.url }}" alt="{{ product.name }}" class="img-fluid">
+                        <p>{{ product.description }}</p>
+                        <p>Цена: {{ product.price }}</p>
+                        <p>Категории:
+                            {% for category in product.categories.all %}
+                                {{ category.name }}
+                            {% endfor %}
+                        </p>
+                        <p>Теги:
+                            {% for tag in product.tags.all %}
+                                {{ tag.name }}
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+{% endblock %}
