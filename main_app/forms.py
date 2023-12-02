@@ -20,7 +20,12 @@ class CategoryForm(forms.ModelForm):
 
 def catalog(request):
     products = Product.objects.all()
-    return render(request, 'catalog.html', {'products': products})
+    categories = Category.objects.all()
+    context = {
+        'products': products,
+        'categories': categories,
+    }
+    return render(request, 'catalog.html', context)
 
 
 def product(request, product_id):
