@@ -1,7 +1,5 @@
 from django.db import models
 
-
-# пизда шлюха член
 class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -31,11 +29,9 @@ class OrderItem(models.Model):
     discount = models.DecimalField(max_digits=10, decimal_places=2)
 
 
-# категория шлюх
 class Category(models.Model):
     name = models.CharField(max_length=255)
 
 
-# теги пидорасов
 class Tag(models.Model):
     name = models.CharField(max_length=255)
