@@ -76,6 +76,7 @@ class CategoryCreateView(CreateView):
 
 class CategoryListView(ListView):
     model = Category
+    template_name = 'category_list.html'
 
 class CategoryDetailView(DetailView):
     model = Category

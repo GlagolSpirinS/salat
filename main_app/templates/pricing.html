@@ -157,6 +157,29 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Buttons for navigation -->
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Explore More</h2>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-center">
+                    <!-- Product related buttons -->
+                    <a class="btn btn-primary me-md-2" href="{% url 'product_create' %}">Create Product</a>
+{#                    <a class="btn btn-primary me-md-2" href="{% url 'product_list' %}">Product List</a>#}
+
+                    <!-- Category related buttons -->
+                    <a class="btn btn-primary me-md-2" href="{% url 'category_list' %}">Category List</a>
+                    <a class="btn btn-primary me-md-2" href="{% url 'category_create' %}">Create Category</a>
+
+                    <!-- Tag related buttons -->
+                    <a class="btn btn-primary me-md-2" href="{% url 'tag_list' %}">Tag List</a>
+                    <a class="btn btn-primary me-md-2" href="{% url 'tag_create' %}">Create Tag</a>
+
+                    <!-- Order related buttons -->
+                    <a class="btn btn-primary me-md-2" href="{% url 'order_list' %}">Order List</a>
+                    <a class="btn btn-primary me-md-2" href="{% url 'order_create' %}">Create Order</a>
+                </div>
+            </div>
                     </div>
                 </div>
             </section>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Confirm Delete Tag</h2>
+        <p>Are you sure you want to delete tag "{{ tag.name }}"?</p>
+        <form method="post" action="{% url 'tag_delete' pk=tag.pk %}">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+{% endblock %}
